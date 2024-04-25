@@ -19,12 +19,18 @@ public class App {
                 // Close startmenu
                 frame.dispose();
 
+                JFrame framebird = new JFrame("Flappy Bird");
+                framebird.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                framebird.setSize(360, 640);
+                framebird.setLocationRelativeTo(null);
+                framebird.setResizable(false);
+
                 // Buat Object JPanel
                 FlappyBird flappyBird = new FlappyBird();
-                frame.add(flappyBird);
-                frame.pack();
+                framebird.add(flappyBird);
+                framebird.pack();
                 flappyBird.requestFocus();
-                frame.setVisible(true);
+                framebird.setVisible(true);
             }
         });
     }
